@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRegisterMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040301"
+    tools:context=".activity.LoginActivity">
+
+    <!-- Imagem de topo arredondada nos cantos inferiores -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivRegisterHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/glRegisterHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_02"
+        app:shapeAppearanceOverlay="@style/CantosInferioresArredondados" />
+
+    <!-- Linha guia a 40% da tela para separar a imagem dos campos -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRegisterHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <!-- Campo: E-mail -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="#88FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glRegisterHeader" />
+
+    <!-- Campo: Senha -->
+    <EditText
+        android:id="@+id/etSenha"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="password"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="#88FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="@id/etEmail"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+
+    <!-- Botão: Inscrever-se -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_yellow"
+        android:text="Entrar"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/etSenha"
+        app:layout_constraintStart_toStartOf="@id/etSenha"
+        app:layout_constraintTop_toBottomOf="@id/etSenha" />
+
+    <!-- Texto de alternância para Login -->
+    <TextView
+        android:id="@+id/tvRegisterFooterLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="16dp"
+        android:text="Já tem uma conta? Entre agora!"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnEntrar"
+        app:layout_constraintStart_toStartOf="@id/btnEntrar"
+        app:layout_constraintTop_toBottomOf="@id/btnEntrar"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
