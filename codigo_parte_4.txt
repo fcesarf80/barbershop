@@ -1,0 +1,133 @@
+﻿    border-top: 4px solid #EDEEEF;
+    flex: 1 0 100%;
+}
+
+.group-selector {
+    padding: 0 52px 24px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #999999;
+    cursor: pointer;
+}
+
+.group-selector__count {
+    margin: 0 8px;
+    border-radius: 8px;
+    background-color: #999;
+    color: #fff;
+    padding: 1px 8px 2px;
+    font-size: 0.75rem;
+}
+
+.group-selector--active {
+    color: #02303A;
+    cursor: auto;
+}
+
+.group-selector--active .group-selector__count {
+    background-color: #686868;
+}
+
+.group-selector--disabled {
+    cursor: not-allowed;
+}
+
+.accordion-header {
+    cursor: pointer;
+}
+
+.container {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.stacktrace {
+    border-radius: 4px;
+    overflow-x: auto;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    min-width: 1000px;
+}
+
+/* Lato (bold, regular) */
+@font-face {
+    font-display: swap;
+    font-family: Lato;
+    font-weight: 500;
+    font-style: normal;
+    src: url("https://assets.gradle.com/lato/fonts/lato-semibold/lato-semibold.woff2") format("woff2"),
+    url("https://assets.gradle.com/lato/fonts/lato-semibold/lato-semibold.woff") format("woff");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Lato;
+    font-weight: bold;
+    font-style: normal;
+    src: url("https://assets.gradle.com/lato/fonts/lato-bold/lato-bold.woff2") format("woff2"),
+    url("https://assets.gradle.com/lato/fonts/lato-bold/lato-bold.woff") format("woff");
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body {
+    color: #02303A;
+    background-color: #ffffff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #02303A;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+h4, h5, h6 {
+    font-size: 0.875rem;
+}
+
+h1 code {
+    font-weight: bold;
+}
+
+ul, ol, dl {
+    list-style-position: outside;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0 0 0 20px;
+    list-style-type: none;
+}
+
